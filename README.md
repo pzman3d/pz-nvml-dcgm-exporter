@@ -4,10 +4,13 @@
 
 Windows NVML exporter that exposes GPU telemetry in **NVIDIA dcgm-exporter** Prometheus format. A compact dashboard shows the same data locally; Prometheus scrapes `/metrics` as usual.
 
+Run it on each office PC so you can watch GPU usage across many machines on the company LAN from one Prometheus or Grafana view.
+
 This project is **not affiliated with NVIDIA**. Metric names and labels follow [dcgm-exporter](https://github.com/NVIDIA/dcgm-exporter) so existing Grafana dashboards can keep working on Windows hosts where DCGM is unavailable.
 
 ## Features
 
+- Built for company LAN monitoring: one exporter per PC, central view of GPU status
 - Prometheus `/metrics` on port **9400** (same default as dcgm-exporter)
 - Dark dashboard: GPU util, temperature, power, framebuffer, SM clock, with usage bars
 - Per-process VRAM and GPU usage (NVML + Windows PDH)
@@ -85,7 +88,7 @@ MIT. See [LICENSE](LICENSE).
 
 ## 中文
 
-以 NVML 采集 GPU 指標，輸出與 NVIDIA dcgm-exporter 相容的 Prometheus `/metrics`，並附暗色儀表板。
+以 NVML 采集 GPU 指標，輸出與 NVIDIA dcgm-exporter 相容的 Prometheus `/metrics`，並附暗色儀表板。方便在區域網路內管理公司多台電腦的使用狀態：每台機器各跑一份，即可集中查看 GPU 占用。
 
 - 預設介面英文，右下角可切換中文；瀏覽器檢查頁固定英文
 - Processes 左側 **Cancel / 終止** 可關閉占用 GPU 的程式（會先確認）
@@ -97,3 +100,4 @@ pip install -r requirements.txt
 python main.py
 .\build.ps1
 ```
+
