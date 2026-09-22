@@ -1,4 +1,4 @@
-<img width="1502" height="894" alt="image" src="https://github.com/user-attachments/assets/5601d01f-51bf-4488-a962-f25d91b044a5" />
+<img width="915" height="659" alt="image" src="https://github.com/user-attachments/assets/15d745d1-98f4-43f1-885c-9756b14ca488" />
 
 # pz-nvml-dcgm-exporter
 
