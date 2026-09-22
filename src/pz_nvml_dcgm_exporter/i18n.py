@@ -1,0 +1,168 @@
+"""UI language strings. Default is English."""
+
+from __future__ import annotations
+
+LANG_EN = "en"
+LANG_ZH = "zh"
+DEFAULT_LANG = LANG_EN
+
+STRINGS: dict[str, dict[str, str]] = {
+    LANG_EN: {
+        "autostart": "Start at login",
+        "starting": "Starting…",
+        "port": "Port",
+        "update": "Update",
+        "updating": "Updating",
+        "copy": "Copy",
+        "open": "Open",
+        "tab_metrics": "  Live metrics  ",
+        "tab_proc": "  Processes  ",
+        "tab_raw": "  Prometheus text  ",
+        "col_metric": "Metric",
+        "col_gpu": "GPU",
+        "col_value": "Value",
+        "col_unit": "Unit",
+        "col_help": "Help",
+        "col_cancel": "Cancel",
+        "col_pid": "PID",
+        "col_name": "Process",
+        "col_vram": "VRAM",
+        "col_util": "GPU util",
+        "col_kind": "Type",
+        "tray_hint": "Close or minimize hides the window to the system tray. Use the tray icon to quit.",
+        "copied": "Copied {url}",
+        "prometheus": "Prometheus: {url}",
+        "host_localhost": "localhost",
+        "host_hostname": "Hostname {name}",
+        "host_primary": "Default NIC",
+        "host_lan": "LAN",
+        "host_nic": "NIC",
+        "invalid_port_title": "Invalid port",
+        "invalid_port_int": "Enter an integer port between 1 and 65535.",
+        "invalid_port_range": "Port must be between 1 and 65535.",
+        "restarting": "Restarting service (port {port})…",
+        "restart_fail_title": "Restart failed",
+        "restart_fail_body": "Could not listen on {host}:{port}: {exc}\nReverted to port {old}.",
+        "restart_fail_footer": "Restart failed, current port {port}",
+        "restarted": "Service restarted. Prometheus: {url}",
+        "refresh_fail": "UI refresh failed: {exc}",
+        "ready": "Ready  {url}    Driver {driver}",
+        "nvml_unavailable": "NVML unavailable",
+        "no_gpu": "No GPU detected. Install NVIDIA drivers and ensure nvml.dll is available.",
+        "card_util": "GPU util",
+        "card_temp": "Temperature",
+        "card_power": "Power",
+        "card_mem": "Memory",
+        "card_clock": "SM clock",
+        "no_metrics": "# No metrics yet. Confirm NVIDIA driver / NVML and reopen.\n",
+        "collected": "Collected {time}",
+        "scrapes": "Scraped by Prometheus {n} times",
+        "last_scrape": " (last {time})",
+        "gpu_count": "{n} GPU(s)    {p} process(es)",
+        "stats_line": "{gpu_n}    {age}    {scrape}    Interval {interval:.0f}s    Port {port}",
+        "tray_show": "Show window",
+        "tray_autostart": "Start at login",
+        "tray_quit": "Quit",
+        "autostart_title": "Start at login",
+        "autostart_fail": "Could not write the startup entry: {exc}",
+        "autostart_on": "Start at login enabled (launches in the system tray)",
+        "autostart_off": "Start at login disabled",
+        "lang_zh": "中文",
+        "lang_en": "English",
+        "cancel_confirm_title": "Cancel process",
+        "cancel_confirm_body": "Terminate {name} (PID {pid})?",
+        "cancel_self": "This exporter cannot terminate itself.",
+        "cancel_ok": "Terminated {name} (PID {pid})",
+        "cancel_fail": "Could not terminate {name} (PID {pid}): {exc}",
+        "cancel_denied": "Access denied. Try running as administrator.",
+    },
+    LANG_ZH: {
+        "autostart": "開機自動啟動",
+        "starting": "啟動中…",
+        "port": "埠",
+        "update": "更新",
+        "updating": "更新中",
+        "copy": "複製",
+        "open": "開啟",
+        "tab_metrics": "  即時指標  ",
+        "tab_proc": "  處理程序  ",
+        "tab_raw": "  Prometheus 原文  ",
+        "col_metric": "指標",
+        "col_gpu": "GPU",
+        "col_value": "數值",
+        "col_unit": "單位",
+        "col_help": "說明",
+        "col_cancel": "終止",
+        "col_pid": "PID",
+        "col_name": "程式",
+        "col_vram": "VRAM",
+        "col_util": "GPU 使用率",
+        "col_kind": "類型",
+        "tray_hint": "關閉或最小化會縮到右下角系統托盤，可在托盤圖示結束程式。",
+        "copied": "已複製 {url}",
+        "prometheus": "Prometheus：{url}",
+        "host_localhost": "本機 localhost",
+        "host_hostname": "主機名稱 {name}",
+        "host_primary": "預設對外網卡",
+        "host_lan": "區域網路",
+        "host_nic": "網卡",
+        "invalid_port_title": "埠號無效",
+        "invalid_port_int": "請輸入 1–65535 的整數埠號。",
+        "invalid_port_range": "埠號必須介於 1–65535。",
+        "restarting": "正在重啟服務（埠 {port}）…",
+        "restart_fail_title": "重啟失敗",
+        "restart_fail_body": "無法監聽 {host}:{port}：{exc}\n已嘗試回到埠 {old}。",
+        "restart_fail_footer": "重啟失敗，目前埠 {port}",
+        "restarted": "服務已重啟，Prometheus：{url}",
+        "refresh_fail": "畫面更新失敗：{exc}",
+        "ready": "就緒  {url}    驅動 {driver}",
+        "nvml_unavailable": "NVML 不可用",
+        "no_gpu": "尚未偵測到 GPU。請確認已安裝 NVIDIA 驅動，且 nvml.dll 可用。",
+        "card_util": "GPU 使用率",
+        "card_temp": "溫度",
+        "card_power": "功耗",
+        "card_mem": "記憶體",
+        "card_clock": "SM 時脈",
+        "no_metrics": "# 尚無指標。確認 NVIDIA 驅動 / NVML 後重新開啟。\n",
+        "collected": "采集 {time}",
+        "scrapes": "已被 Prometheus 查詢 {n} 次",
+        "last_scrape": "（上次 {time}）",
+        "gpu_count": "{n} 張 GPU    {p} 個處理程序",
+        "stats_line": "{gpu_n}    {age}    {scrape}    采集間隔 {interval:.0f}s    埠 {port}",
+        "tray_show": "顯示視窗",
+        "tray_autostart": "開機自動啟動",
+        "tray_quit": "結束程式",
+        "autostart_title": "開機自動啟動",
+        "autostart_fail": "無法寫入開機啟動項目：{exc}",
+        "autostart_on": "已開啟開機自動啟動（登入後會縮到系統托盤）",
+        "autostart_off": "已關閉開機自動啟動",
+        "lang_zh": "中文",
+        "lang_en": "English",
+        "cancel_confirm_title": "終止程式",
+        "cancel_confirm_body": "要終止 {name}（PID {pid}）嗎？",
+        "cancel_self": "無法終止本程式自己。",
+        "cancel_ok": "已終止 {name}（PID {pid}）",
+        "cancel_fail": "無法終止 {name}（PID {pid}）：{exc}",
+        "cancel_denied": "權限不足，請改用系統管理員執行。",
+    },
+}
+
+_lang = DEFAULT_LANG
+
+
+def get_lang() -> str:
+    return _lang
+
+
+def set_lang(lang: str) -> str:
+    global _lang
+    _lang = LANG_ZH if lang == LANG_ZH else LANG_EN
+    return _lang
+
+
+def t(key: str, **kwargs: object) -> str:
+    table = STRINGS.get(_lang) or STRINGS[LANG_EN]
+    text = table.get(key) or STRINGS[LANG_EN].get(key, key)
+    if kwargs:
+        return text.format(**kwargs)
+    return text
