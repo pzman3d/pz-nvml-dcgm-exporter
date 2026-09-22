@@ -1,5 +1,3 @@
-<img width="917" height="654" alt="image" src="https://github.com/user-attachments/assets/82d3e11e-9cf8-447e-927b-cfce1c1757ea" />
-
 # pz-nvml-dcgm-exporter
 
 Windows NVML exporter that exposes GPU telemetry in **NVIDIA dcgm-exporter** Prometheus format. A compact dashboard shows the same data locally; Prometheus scrapes `/metrics` as usual.
@@ -84,6 +82,10 @@ src/pz_nvml_dcgm_exporter/      # application package
 
 MIT. See [LICENSE](LICENSE).
 
+## Sponsor
+
+If this tool helps, you can sponsor development: [paypal.me/pzman3d](https://paypal.me/pzman3d)
+
 ---
 
 ## 中文
@@ -94,10 +96,10 @@ MIT. See [LICENSE](LICENSE).
 - Processes 左側 **Cancel / 終止** 可關閉占用 GPU 的程式（會先確認）
 - 列顏色依 GPU／VRAM 用量：綠 ≥ 40%、黃 ≥ 70%、紅 ≥ 85%
 - Prometheus 刮取仍是標準 `text/plain`
+- 贊助：[paypal.me/pzman3d](https://paypal.me/pzman3d)
 
 ```powershell
 pip install -r requirements.txt
 python main.py
 .\build.ps1
 ```
-
