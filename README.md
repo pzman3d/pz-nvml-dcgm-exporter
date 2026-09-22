@@ -1,3 +1,5 @@
+<img width="1502" height="894" alt="image" src="https://github.com/user-attachments/assets/5601d01f-51bf-4488-a962-f25d91b044a5" />
+
 # pz-nvml-dcgm-exporter
 
 Windows NVML exporter that exposes GPU telemetry in **NVIDIA dcgm-exporter** Prometheus format. A compact dashboard shows the same data locally; Prometheus scrapes `/metrics` as usual.
